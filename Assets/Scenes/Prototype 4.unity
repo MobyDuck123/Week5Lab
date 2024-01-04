@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 1572755546}
   - component: {fileID: 1572755545}
   m_Layer: 0
-  m_Name: FocalPoint
+  m_Name: Focal Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -624,15 +624,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1910695729}
-  - component: {fileID: 1910695732}
   - component: {fileID: 1910695728}
   - component: {fileID: 1910695727}
+  - component: {fileID: 1910695733}
   - component: {fileID: 1910695726}
   - component: {fileID: 1910695730}
-  - component: {fileID: 1910695731}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -751,7 +750,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1910695731
+--- !u!114 &1910695733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -763,23 +762,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0df84dc79f3e29740b97ea330b930c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
---- !u!114 &1910695732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1910695725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0edaa733c2b31c943be63d3fd3432c82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 9054695866972027730, guid: 693ca10325c4ab9428f1357aa9760488, type: 3}
-  projectileSpeed: 50
-  shootingDuration: 3
-  spawnPoint: {fileID: 983895733}
+  speed: 3
+  currentPowerUpType: 0
+  bulletPrefab: {fileID: 9054695866972027730, guid: 693ca10325c4ab9428f1357aa9760488, type: 3}
 --- !u!1001 &7305732181041295649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -855,7 +840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7070661558447085659, guid: 94ffba80e8d9e794ba32c5a32ee58feb, type: 3}
       propertyPath: m_Name
-      value: Gem_01
+      value: PowerUp
       objectReference: {fileID: 0}
     - target: {fileID: 8671161549023112496, guid: 94ffba80e8d9e794ba32c5a32ee58feb, type: 3}
       propertyPath: m_IsTrigger
@@ -863,7 +848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933440620530259126, guid: 94ffba80e8d9e794ba32c5a32ee58feb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.32
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8933440620530259126, guid: 94ffba80e8d9e794ba32c5a32ee58feb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -871,7 +856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933440620530259126, guid: 94ffba80e8d9e794ba32c5a32ee58feb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.28
+      value: 3.16
       objectReference: {fileID: 0}
     - target: {fileID: 8933440620530259126, guid: 94ffba80e8d9e794ba32c5a32ee58feb, type: 3}
       propertyPath: m_LocalRotation.w
