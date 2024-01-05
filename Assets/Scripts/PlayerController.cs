@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private Coroutine powerUpCountDown;
     private GameObject FocalPoint;
 
+    public GameObject powerUpIndicator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,9 @@ public class PlayerController : MonoBehaviour
         {
             ShootBullets();
         }
+
+        powerUpIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,6 +54,7 @@ public class PlayerController : MonoBehaviour
                 StopCoroutine(powerUpCountDown);
             }
             powerUpCountDown = StartCoroutine(PowerUpCountDownRoutine());
+            powerUpIndicator.gameObject.SetActive(true);
         }
 
 
@@ -73,6 +79,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(5);
         hasPowerUp = false;
         currentPowerUpType = PowerUpType.None;
+        powerUpIndicator.gameObject.SetActive(false);
     }
 
     IEnumerator PowerUpCountDownRoutine2()
